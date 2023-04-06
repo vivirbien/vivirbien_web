@@ -1,7 +1,7 @@
 <template>
-  <div class="vivirbien">
+  <div class="vidalonga">
     <navigation />
-    <div class="vivirbien__main">
+    <div class="vidalonga__main">
       <router-view></router-view>
     </div> 
   </div>

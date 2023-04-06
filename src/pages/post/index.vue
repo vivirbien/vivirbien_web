@@ -1,5 +1,5 @@
 <template>
-    <div class="vivirbien-posts">
+    <div class="vidalonga-posts">
         <ul>
             <li v-for="post in postsList">
                 <router-link class="text-link" :to="`/post/${post.id}/${post.slug}`">
@@ -28,7 +28,7 @@ onMounted(async () => {
 </script>
 
 <style scoped lang="scss">
-.vivirbien-posts {
-    padding-top: 60px;
+.vidalonga-posts {
+    padding: 60px 20px 20px 20px;
 }
 </style>

@@ -1,13 +1,13 @@
 <!-- StaticNavigation.vue -->
 <template>
-  <nav class="vivirbien-nvigation">
-    <ul class="vivirbien-nvigation__nav-list">
+  <nav class="vidalonga-nvigation">
+    <ul class="vidalonga-nvigation__nav-list">
       <li 
-        class="vivirbien-nvigation__nav-item" 
+        class="vidalonga-nvigation__nav-item" 
         v-for="route in staticRoutes" :key="route.name"
-        :class="{ 'vivirbien-nvigation__nav-item--active': isActiveRoute(route) }" >
+        :class="{ 'vidalonga-nvigation__nav-item--active': isActiveRoute(route) }" >
         <router-link 
-          class="vivirbien-nvigation__nav-link"
+          class="vidalonga-nvigation__nav-link"
           :to="{ name: route.name }">{{ route.name }}</router-link>
       </li>
     </ul>
@@ -32,7 +32,7 @@ const isActiveRoute = (currentRoute) => {
 
 <style scoped lang="scss">
 $border-color: #111;
-.vivirbien-nvigation {
+.vidalonga-nvigation {
   width: 100%;
   height: 5vh;
   display: flex;

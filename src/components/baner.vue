@@ -1,7 +1,7 @@
 <template>
-    <div class="vivirbien-baner">
-        <div class="vivirbien-baner__image-box"></div>
-        <div class="vivirbien-baner__content-box">
+    <div class="vidalonga-baner" :style="{'height': banerHeight}">
+        <div class="vidalonga-baner__image-box"></div>
+        <div class="vidalonga-baner__content-box">
             <h3>Vive más, vive mejor</h3>
             <p>Descubre los secretos de la longevidad y la salud óptima</p>
             <vivirButton :text="'Suscribete'"/>
@@ -10,15 +10,20 @@
 </template>
 <script setup>
 import vivirButton from '../components/ui/button.vue';
+
+const props = defineProps({
+  banerHeight: String
+})
 </script>
 <style scoped lang="scss">
 $border-color: #111;
 
-.vivirbien-baner {
+.vidalonga-baner {
     width: 100%;
     min-height: 65vh;
     display: grid;
     grid-template-columns: 1fr 1fr;
+    padding: 20px;
 
     @media screen and (max-width: 1000px) {
         grid-template-columns: 1fr;

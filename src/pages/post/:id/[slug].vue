@@ -1,5 +1,5 @@
 <template>
-  <div class="vivirbien-post-page">
+  <div class="vidalonga-post-page">
     <h1 v-if="post">{{ state.title }}</h1>
     <div v-if="post" v-html="state.html"></div>
   </div>
@@ -33,10 +33,10 @@ onMounted(async () => {
 </script>
 
 <style scoped lang="scss">
-.vivirbien-post-page {
+.vidalonga-post-page {
   max-width: 1000px;
   margin: auto;
-  padding-top: 60px;
+  padding: 60px 20px 20px 20px;
 }
 </style>
   

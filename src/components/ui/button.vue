@@ -1,5 +1,5 @@
 <template>
-    <button class="vivirbien-btn">{{ text }}</button>
+    <button class="vidalonga-btn">{{ text }}</button>
 </template>
 <script setup>
 const props = defineProps({
@@ -7,7 +7,7 @@ const props = defineProps({
 })
 </script>
 <style scoped lang="scss">
-.vivirbien-btn {
+.vidalonga-btn {
     border: none;
     padding: 12px 22px;
     box-shadow: 0 0 0 1px #222;

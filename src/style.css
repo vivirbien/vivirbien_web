@@ -269,17 +269,22 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 100
 }
 
-/* VIVIRBIEN base */
+/* VivaLonga base */
 
-.vivirbien {
+.vivalonga {
   width: 100%;
   position: relative;
 }
 
-.vivirbien__main {
+.vivalonga__main {
   max-width: 1200px;
   margin: auto;
   padding: 20px;
   background: var(--color-featured);
   padding-top: 5vh;
+}
+
+.vidalonga-images {
+  border-radius: 8px;
+  box-shadow: 0 0 0 1px var(--border-table);
 }
