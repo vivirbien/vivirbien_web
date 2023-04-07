@@ -9,6 +9,7 @@
 import { onMounted, ref, reactive } from 'vue'
 import { useRoute } from 'vue-router'
 import contentful from '../../../services/contentful'
+import { BLOCKS } from '@contentful/rich-text-types';
 import { documentToHtmlString } from '@contentful/rich-text-html-renderer';
 
 const route = useRoute()
@@ -18,12 +19,20 @@ const state = reactive({
   html: ''
 })
 
+// height="${fields.file.details.image.height}" width="${fields.file.details.image.width}"
+const options = {
+    renderNode: {
+        [BLOCKS.EMBEDDED_ASSET]: ({ data: { target: { fields }}}) =>
+            `<img src="${fields.file.url}" alt="${fields.description}" style="max-width: ${fields.file.details.image.width}"/>`,
+    },
+};
+
 onMounted(async () => {
   if (route.params.id) {
     try {
       const { title, content } = await contentful.fetchSingleEntry(route.params.id)
       state.title = title
-      state.html  = documentToHtmlString(content)
+      state.html  = documentToHtmlString(content, options)
       post.value  = true
     } catch (error) {
       console.error(error);

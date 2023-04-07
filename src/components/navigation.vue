@@ -34,7 +34,7 @@ const isActiveRoute = (currentRoute) => {
 $border-color: #111;
 .vidalonga-nvigation {
   width: 100%;
-  height: 5vh;
+  height: 40px;
   display: flex;
   position: fixed;
   background-color: var(--bg-5rd);

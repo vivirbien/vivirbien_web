@@ -1,7 +1,7 @@
 <template>
 <main class="vidalonga-home">
-    <baner baner-height="90vh"/>
-    <vidalonga-section section-height="100vh" class="vidalonga-home__section-about" name="index_about" bgColor="var(--bg-5rd)">
+    <baner :banerStyle="banerStyle"/>
+    <vidalonga-section :customStyle="customStyleAbout" class="vidalonga-home__section-about" name="index_about">
         <div class="vidalonga-home__section-about-Stamp">
             <img src="../assets/stamp_avocado.png" alt="">
         </div>
@@ -10,11 +10,20 @@
             <p>un recurso en línea dedicado a la longevidad y la salud en general. Nuestra empresa fue fundada en 2023 por un equipo de expertos en nutrición, bienestar y ciencias biomédicas, con el objetivo de compartir información valiosa y ayudar a las personas a vivir vidas más largas y saludables.</p> 
         </div> 
     </vidalonga-section>
+
+    <vidalonga-section class="vidalonga-home__section-articles" name="index_articles">
+        <article-list from="home" />
+    </vidalonga-section>
+    
 </main> 
 </template>
 <script setup>
 import baner from '../components/baner.vue'
 import vidalongaSection from '../components/ui/vidalonga-section.vue'
+import articleList from '../components/ux/article-list.vue'
+
+const banerStyle = {'height': '90vh', 'maxWidth': '1000px'}
+const customStyleAbout = {'height': '100vh', 'maxWidth': '100%', 'backgroundColor': 'var(--bg-5rd)'}
 </script>
 <style scoped lang="scss">
 .vidalonga-home {
@@ -25,6 +34,10 @@ import vidalongaSection from '../components/ui/vidalonga-section.vue'
         &-about {
             margin-top: 310px;
             position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
 
             &-Container {
                 padding: 100px;
@@ -41,6 +54,10 @@ import vidalongaSection from '../components/ui/vidalonga-section.vue'
                 top: -100px;
                 right: 10px;
             }
+        }
+
+        &-articles {
+            padding-top: 100px;
         }
     }
 }

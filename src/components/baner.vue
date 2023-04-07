@@ -1,5 +1,5 @@
 <template>
-    <div class="vidalonga-baner" :style="{'height': banerHeight}">
+    <div class="vidalonga-baner" :style="banerStyle">
         <div class="vidalonga-baner__image-box"></div>
         <div class="vidalonga-baner__content-box">
             <h3>Vive más, vive mejor</h3>
@@ -12,7 +12,7 @@
 import vivirButton from '../components/ui/button.vue';
 
 const props = defineProps({
-  banerHeight: String
+  banerStyle: Object
 })
 </script>
 <style scoped lang="scss">
@@ -24,6 +24,7 @@ $border-color: #111;
     display: grid;
     grid-template-columns: 1fr 1fr;
     padding: 20px;
+    margin: auto;
 
     @media screen and (max-width: 1000px) {
         grid-template-columns: 1fr;
