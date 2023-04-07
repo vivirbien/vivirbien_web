@@ -19,11 +19,20 @@ const state = reactive({
   html: ''
 })
 
+const styelUser = (width='', height='') => {
+  return `
+    max-width: ${width};
+    margin-top: 40px;
+    margin-bottom: 20px;
+    border-radius: 4px;
+    box-shadow: 0 0 0 1px #222;`
+}
+
 // height="${fields.file.details.image.height}" width="${fields.file.details.image.width}"
 const options = {
     renderNode: {
         [BLOCKS.EMBEDDED_ASSET]: ({ data: { target: { fields }}}) =>
-            `<img src="${fields.file.url}" alt="${fields.description}" style="max-width: ${fields.file.details.image.width}"/>`,
+            `<img src="${fields.file.url}" alt="${fields.description}" style="${styelUser(fields.file.details.image.width, fields.file.details.image.height)}"/>`,
     },
 };
 
@@ -45,7 +54,7 @@ onMounted(async () => {
 .vidalonga-post-page {
   max-width: 1000px;
   margin: auto;
-  padding: 60px 20px 20px 20px;
+  padding: 100px 20px 20px 20px;
 }
 </style>
   

@@ -9,7 +9,7 @@ import articleList from '../../components/ux/article-list.vue';
 
 <style scoped lang="scss">
 .vidalonga-posts {
-    max-width: 1000px;
+    max-width: 1140px;
     margin: auto;
     padding: 100px 20px 20px 20px;
 }

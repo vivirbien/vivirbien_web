@@ -22,7 +22,7 @@ import baner from '../components/baner.vue'
 import vidalongaSection from '../components/ui/vidalonga-section.vue'
 import articleList from '../components/ux/article-list.vue'
 
-const banerStyle = {'height': '90vh', 'maxWidth': '1000px'}
+const banerStyle = {'height': '90vh', 'maxWidth': '1140px'}
 const customStyleAbout = {'height': '100vh', 'maxWidth': '100%', 'backgroundColor': 'var(--bg-5rd)'}
 </script>
 <style scoped lang="scss">
@@ -40,7 +40,21 @@ const customStyleAbout = {'height': '100vh', 'maxWidth': '100%', 'backgroundColo
             justify-content: center;
 
             &-Container {
-                padding: 100px;
+                padding: 200px;
+
+                h2 {
+                    color: #212121c4;
+                    font-family: "Inconsolata", monospace;
+                    font-size: 4rem;
+                    margin-bottom: 40px;
+                }
+
+                p {
+                    font-size: 1.4rem;
+                    line-height: 2.8rem;
+                    color: #000000bd;
+                    font-weight: 100;
+                }
 
                 @media screen and (max-width: 1000px) {
                     padding: 100px 50px 50px 50px;
