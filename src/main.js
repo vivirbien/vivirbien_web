@@ -2,6 +2,9 @@ import { createApp } from 'vue'
 import './style.css'
 import App from './App.vue'
 import router from './rauts/router'
-import VueMeta from 'vue-meta'
+import { createHead } from "unhead"
 
-createApp(App).use(router).use(VueMeta).mount('#app')
+
+const head = createHead()
+
+createApp(App).use(router).use(head).mount('#app')

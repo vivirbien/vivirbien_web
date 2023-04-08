@@ -11,10 +11,12 @@
   "dependencies": {
     "@contentful/rich-text-html-renderer": "^16.0.3",
     "@contentful/rich-text-types": "^16.0.3",
+    "@unhead/ssr": "^1.1.25",
     "contentful": "^9.3.5",
     "sass": "^1.60.0",
+    "unhead": "^1.1.25",
+    "vite-plugin-head": "^1.0.2",
     "vue": "^3.2.47",
-    "vue-meta": "^2.4.0",
     "vue-router": "^4.1.6"
   },
   "devDependencies": {

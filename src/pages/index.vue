@@ -21,6 +21,17 @@
 import baner from '../components/baner.vue'
 import vidalongaSection from '../components/ui/vidalonga-section.vue'
 import articleList from '../components/ux/article-list.vue'
+import { useHead } from 'unhead'
+
+useHead({
+  title: 'VidaLonga: Descubre los secretos de la longevidad y el bienestar',
+  meta: [
+    {
+      name: 'description',
+      content: 'VidaLonga te ofrece información confiable y actualizada sobre longevidad, salud y bienestar. Explora nuestros artículos y recursos para vivir una vida más larga y saludable.',
+    },
+  ],
+})
 
 const banerStyle = {'height': '90vh', 'maxWidth': '1140px'}
 const customStyleAbout = {'min-height': '100vh', 'maxWidth': '100%', 'backgroundColor': 'var(--bg-5rd)'}

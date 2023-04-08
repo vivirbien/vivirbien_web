@@ -9,11 +9,13 @@
 import { onMounted, ref, reactive } from 'vue'
 import { useRoute } from 'vue-router'
 import contentful from '../../../services/contentful'
-import { BLOCKS } from '@contentful/rich-text-types';
-import { documentToHtmlString } from '@contentful/rich-text-html-renderer';
+import { BLOCKS } from '@contentful/rich-text-types'
+import { documentToHtmlString } from '@contentful/rich-text-html-renderer'
+import { useHead } from 'unhead'
 
 const route = useRoute()
 const post = ref(null)
+
 const state = reactive({
   title: '',
   html: ''
@@ -39,10 +41,21 @@ const options = {
 onMounted(async () => {
   if (route.params.id) {
     try {
-      const { title, content } = await contentful.fetchSingleEntry(route.params.id)
+      const { title, content, description } = await contentful.fetchSingleEntry(route.params.id)
       state.title = title
+      state.description = description
       state.html  = documentToHtmlString(content, options)
       post.value  = true
+
+      useHead({
+        title: title,
+        meta: [
+          {
+            name: 'description',
+            content: description,
+          },
+        ],
+      })
     } catch (error) {
       console.error(error);
     }

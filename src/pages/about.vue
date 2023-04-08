@@ -38,7 +38,19 @@
 
     </div>
 </template>
-<script></script>
+<script setup>
+import { useHead } from 'unhead'
+
+useHead({
+    title: 'Bienvenido a VidaLonga',
+    meta: [
+        {
+        name: 'description',
+        content: 'Tu recurso en línea dedicado a la longevidad y la salud en general. Fundada en 2023 por un grupo de entusiastas apasionados por la nutrición, el bienestar y las ciencias biomédicas, nuestra meta es compartir información valiosa y apoyar a las personas en su camino hacia una vida más larga y saludable.',
+        },
+    ],
+})
+</script>
 <style scoped lang="scss">
 .vidalonga-about {
     max-width: 1000px;

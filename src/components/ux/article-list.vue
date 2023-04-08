@@ -38,7 +38,6 @@ onMounted(async () => {
     try {
         const posts = await contentful.fetchBlogPosts('blogPost')
         postsList.value = posts
-        console.log(postsList.value[0].image.fields.description);
     } catch (error) {
         console.error(error);
     }
