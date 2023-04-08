@@ -23,7 +23,7 @@ import vidalongaSection from '../components/ui/vidalonga-section.vue'
 import articleList from '../components/ux/article-list.vue'
 
 const banerStyle = {'height': '90vh', 'maxWidth': '1140px'}
-const customStyleAbout = {'height': '100vh', 'maxWidth': '100%', 'backgroundColor': 'var(--bg-5rd)'}
+const customStyleAbout = {'min-height': '100vh', 'maxWidth': '100%', 'backgroundColor': 'var(--bg-5rd)'}
 </script>
 <style scoped lang="scss">
 .vidalonga-home {

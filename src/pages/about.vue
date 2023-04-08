@@ -98,6 +98,10 @@
             padding: 120px;
             text-align: right;
             font-size: 2rem;
+
+            @media screen and (max-width: 600px) {
+                padding: 60px;
+            }
         }
     }
 
