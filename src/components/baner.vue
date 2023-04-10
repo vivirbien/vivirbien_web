@@ -4,7 +4,9 @@
         <div class="vidalonga-baner__content-box">
             <h3>Vive más, vive mejor</h3>
             <p>Descubre los secretos de la longevidad y la salud óptima</p>
-            <vivirButton :text="'Suscribete'"/>
+            <vivirButton class="vidalonga-baner__btn" :text="'Suscribete'"/>
+            <br>
+            <iframe class="vidalonga-baner__iframe" src="https://www.youtube.com/embed/_BAwyzB3Ja8?list=PL1SQ0SqY7EaYbbeEx2aO6JJk2mGdnB7RB" title="Web accessibility | creating websites with accessibility in mind" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
         </div>
     </div>   
 </template>
@@ -33,7 +35,7 @@ $border-color: #111;
     &__image-box {
         width: 100%;
         margin: auto;
-        height: 100%;
+        height: 83%;
         border-radius: 8px;
         box-shadow: 0 0 0 1px $border-color;
         background-color: var(--bg-5rd);
@@ -63,7 +65,20 @@ $border-color: #111;
         @media screen and (max-width: 1000px) {
             padding: 20px;
             padding-top: 40px;
+            border-bottom: 100px;
         }
     }   
+
+    &__iframe {
+        width: 450px;
+        height: 253px;
+        margin-top: 20px;
+        border-radius: 8px;
+        box-shadow: 0 0 0 1px #111;
+    }
+
+    &__btn{
+        margin-top: 30px;
+    }
 }
 </style>

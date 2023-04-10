@@ -33,7 +33,7 @@ useHead({
   ],
 })
 
-const banerStyle = {'height': '90vh', 'maxWidth': '1140px'}
+const banerStyle = {'maxWidth': '1140px'}
 const customStyleAbout = {'min-height': '100vh', 'maxWidth': '100%', 'backgroundColor': 'var(--bg-5rd)'}
 </script>
 <style scoped lang="scss">
