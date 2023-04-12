@@ -6,7 +6,6 @@
             <p>Descubre los secretos de la longevidad y la salud óptima</p>
             <vivirButton class="vidalonga-baner__btn" :text="'Suscribete'"/>
             <br>
-            <iframe class="vidalonga-baner__iframe" src="https://www.youtube.com/embed/_BAwyzB3Ja8?list=PL1SQ0SqY7EaYbbeEx2aO6JJk2mGdnB7RB" title="Web accessibility | creating websites with accessibility in mind" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
         </div>
     </div>   
 </template>
@@ -70,11 +69,12 @@ $border-color: #111;
     }   
 
     &__iframe {
-        width: 450px;
-        height: 253px;
-        margin-top: 20px;
-        border-radius: 8px;
-        box-shadow: 0 0 0 1px #111;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border: 0;
     }
 
     &__btn{
